@@ -95,6 +95,23 @@ img, video{
   border: 5px solid #000;
 }
 
+main {
+  overflow-y: auto;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+/* Makes each recipe block scrollable vertically if the content overflows */
+.recipe-block {
+  overflow-y: auto;
+  max-height: 500px; /* Adjust the max height as needed */
+}
+
+/* Optional: Add a scrollbar for the navigation menu if it overflows horizontally */
+.topnav ul {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 /* Pets */
 
 .pet-profile {
