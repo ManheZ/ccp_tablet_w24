@@ -1,0 +1,312 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 2.75rem; /* 40px */
+  margin-top:  1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: rgb(82, 42, 81); /* A deep blue, great for standout titles */
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+  margin-bottom: 0.5rem;
+  margin-top:  2.5rem;
+  text-align: center;
+  text-decoration: underline;
+  color: #000000; /* A slightly darker blue for distinction */
+}
+
+h3 {
+  font-size: 1.5rem; /* 28px */
+  margin-bottom: 0.5rem;
+  margin-top:  1.75rem;
+  color: #000000; /* An even darker blue for further hierarchy */
+}
+
+p, ul {
+  font-size: 1rem; /* 16px */
+}
+
+h1, h2, h3, p{
+  margin-left: 3%; 
+  margin-right: 3%; 
+}
+
+ul,ol {
+  padding-left: 4.5%;
+  margin-right: 3%;
+}
+
+nav .topnav ul li {
+  padding: none;
+  margin: none;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px; /* Start off-screen */
+    left: 0;
+    background: #000; /* Choose a background color that makes sense for your site */
+    color: #fff; /* Text color */
+    padding: 8px;
+    z-index: 100; /* Ensure it's above other content */
+    transition: top 0.3s; /* Smooth transition for better UX */
+  }
+  
+.skip-link:focus {
+    top: 10px; /* Move into view when focused */
+  }
+.topnav li {
+    display: inline-block;
+  }  
+.topnav {
+    background-color: rgb(82, 42, 81);
+    overflow: hidden;
+  }
+  /* Style the links inside the navigation bar */
+.topnav a {
+      float: left;
+      display: flex;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 22px;
+      border-bottom: 3px solid transparent;
+    }
+  
+.topnav a:hover {
+      border-bottom: 3px solid rgb(244, 248, 174);
+    }
+  
+.topnav a.active {
+      border-bottom: 3px solid rgb(244, 248, 174);
+    }
+
+img, video{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 60%;
+  border: 5px solid #000;
+}
+
+/* Pets */
+
+.pet-profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.pet-profile img, .pet-profile video{
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.item1, .item2, .item3, .item4, .item5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+	justify-items: center;
+  grid-column: span 4; 
+}
+
+.item1 img, .item1 video, .item2 img, .item3 img, .item4 img, .item5 img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 3px dashed #000;
+}
+
+/* Recipes */
+
+.recipe-profile img, .recipe-profile video{
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 0%;
+  border: 0px none #000;
+
+}
+
+.recipe-block{
+  border: 3px solid rgb(82, 42, 81);
+  border-radius: 2.5%;
+  margin: 2.5%;
+}
+
+.recipe-profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.item_a img, .item_b img, .item_c img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 0px none #000;
+  border-radius: 0%;
+  box-shadow: none;
+}
+
+
+.item_a, .item_b, .item_c {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  justify-items: center;
+  grid-column: span 3;
+}
+
+
+/* Travel Destinations */
+
+.travel-destination-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.destination1, .destination2, .destination3{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.travel-destination-profile img, .travel-destination-profile video{
+  border-radius: 0%;
+  border: 0px none #000;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destination1 img, .destination1 video, .destination2 img, .destination2 video, .destination3 img, .destination3 video{
+  border-radius: 0%;
+  border: 0px none #000;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .topnav a {
+    padding: 10px 14px; /* Adjusted padding for better touch interaction */
+  }
+
+  .skip-link {
+    display: block; /* Ensure visibility on tablet devices */
+  }
+
+  /*Pet*/
+
+  .pet-profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .pet-description {
+    margin-left: 20px;
+  }
+
+  /*Recipe*/
+
+  .recipe-info-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .recipe-info-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 180px;
+  }
+
+  .recipe-step-container {
+    display: flex;
+  }
+
+  .ingredients, .recipe-steps {
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  /*Travel*/
+  .destination1, .destination2, .destination3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: #000 dashed 3px;
+  }
+
+  .travel-item{
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .travel-item img, .travel-item video{
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .travel-item p {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+
+}
